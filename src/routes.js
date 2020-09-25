@@ -14,7 +14,7 @@ export default function Routes() {
         <Route path="/" exact component={Produtos} />
         <Route path="/pedido" component={Pedido} />
         <Route path="/finalizado" component={Finalizado} />
-        <Route path="/auth" component={Login} />
+        <Route path="/login" component={Login} />
         <Route path="/acesso/categorias" component={CategoriasAcesso} />
       </Switch>
     </BrowserRouter>
