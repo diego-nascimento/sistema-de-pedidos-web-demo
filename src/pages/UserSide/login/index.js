@@ -17,7 +17,7 @@ function Login() {
 
   React.useEffect(() => {
     feedEmpresa();
-  }, [empresa]);
+  }, []);
 
   React.useEffect(()=>{
       localStorage.removeItem('token');
@@ -32,19 +32,20 @@ function Login() {
             password: senha
         }); 
         localStorage.setItem('token', response.data.user.token)
-        history.push('/acesso/categorias');
+        history.push('/acesso/categorias')
     } catch (error) {
         console.log(error)
     }
     
   }
 
-
+  console.log(empresa.foto)
     return (
         
         <Container>
             <Modal>
-            <img src={empresa} alt={empresa.nome} style={{width: "40%", alignSelf: 'center', marginTop: '50px'}}/>
+                {empresa.foto? <img src={empresa.foto.url} alt={empresa.nome} style={{width: "40%", alignSelf: 'center', marginTop: '50px'}}/> : null}
+            
                 <Formulario onSubmit={handleLogin}>
                     <Campo>
                         <label htmlFor="">Usuario</label>
@@ -58,7 +59,6 @@ function Login() {
                 </Formulario>
             </Modal>
         </Container> 
-        
     
     )
 }
