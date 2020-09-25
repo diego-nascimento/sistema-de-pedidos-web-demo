@@ -8,7 +8,7 @@ function NovaCategoria() {
   const history = useHistory();
   const [image, setImage] = React.useState(null);
   const [file, setFile] = React.useState(null);
-  const [image_id, setImage_id] = React.useState(null);
+  //const [image_id, setImage_id] = React.useState(null);
   const imagemRef = React.useRef();
   React.useEffect(() => {
     checkAuth(localStorage.getItem('token'), history);
@@ -37,7 +37,8 @@ function NovaCategoria() {
         Authorization: `Bearer ${localStorage.getItem('token')}`,
       },
     });
-    setImage_id(response.data._id);
+    console.log(response);
+    // setImage_id(response.data._id);
   }
 
   return (

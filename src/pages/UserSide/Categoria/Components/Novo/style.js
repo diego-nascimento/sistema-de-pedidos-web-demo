@@ -77,6 +77,7 @@ export const Preview = styled.div`
     border-radius: 15px;
     color: #fff;
     cursor: pointer;
+    margin-top: 20px;
   }
 
   strong {
