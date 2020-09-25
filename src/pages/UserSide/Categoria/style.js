@@ -30,10 +30,9 @@ export const Item = styled.li`
   flex-direction: column;
   background-color: white;
   width: 100%;
-  max-width: 400px;
+  max-width: 350px;
   border-radius: 25px;
   padding: 20px;
-  margin: 0 20px;
   box-sizing: border-box;
 
   h2 {
