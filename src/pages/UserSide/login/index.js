@@ -44,7 +44,7 @@ function Login() {
         
         <Container>
             <Modal>
-            <img src={empresa.foto.url} alt={empresa.nome} style={{width: "40%", alignSelf: 'center', marginTop: '50px'}}/>
+            <img src={empresa} alt={empresa.nome} style={{width: "40%", alignSelf: 'center', marginTop: '50px'}}/>
                 <Formulario onSubmit={handleLogin}>
                     <Campo>
                         <label htmlFor="">Usuario</label>
