@@ -1,9 +1,9 @@
+
+
 import styled from 'styled-components';
 
-export const Container = styled.main`
-    width: 100vw;
-    min-height: 100vh;
-    background: linear-gradient(
+export const Login = styled.main`
+   background: linear-gradient(
     0.1turn,
     #2ee440,
     #ebf8e1,
@@ -11,65 +11,69 @@ export const Container = styled.main`
     #ebf8e1,
     #2ee440
   );
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 `;
 
 export const Modal = styled.div`
-    width: 100%;
-    max-width: 400px;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    align-items: center;
-    margin: 0 20px;
-    box-sizing: border-box;
-    border-radius: 15px;
-
+  width: 100%;
+  max-width: 450px;
+  background-color: #262b27;
+  padding: 50px;
+  border-radius: 25px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-around;
+  color: white;
+  box-sizing: border-box;
 `;
 
+export const Mensagem = styled.p`
+  color: red;
+  font-size: 20px;
+  margin: 20px auto;
+`;
+
+
+
 export const Formulario = styled.form`
-    margin-top: 50px;
-    width: 100%;
-    max-width: 380px;
-    padding: 0px 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
-    input[type="text"], input[type="password"]{
-        width: 300px;
-        border: 1px solid black;
-        margin-left: 10px;
-        height: 30px;
-        border-radius: 5px;
-        padding-left: 20px;
-        font-size: 16px;
-    }
-
-    label{
-        font-weight: bold;
-    }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
 `;
 
 export const Campo = styled.div`
-   
-    margin-top: 20px;
+  margin-top: 20px;
+`;
+
+export const Entrada = styled.input`
+  height: 30px;
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 5px;
+
+  &[type='password'],
+  &[type='email'] {
+    padding: 20px;
+    font-size: 20px;
+  }
 `;
 
 export const Botao = styled.button`
-    align-self: center;
-    margin: 50px 0;
-    height: 40px;
-    width: 70%;
-    border: 1px solid black;
-    border-radius: 15px;
-    font-size: 16px;
-    background: #2ee440;
-    font-weight: bold;
-    color: black;
-
+  width: 50%;
+  align-self: center;
+  height: 50px;
+  border-radius: 5px;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 50px;
+  font-weight: bold;
+  background: #2ee440;
 `;
