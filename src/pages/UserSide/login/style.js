@@ -1,9 +1,15 @@
+import styled, { keyframes } from 'styled-components';
 
-
-import styled from 'styled-components';
+const animacaoLogo = keyframes`
+  0%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+`;
 
 export const Login = styled.main`
-   background: linear-gradient(
+  background: linear-gradient(
     0.1turn,
     #2ee440,
     #ebf8e1,
@@ -31,6 +37,11 @@ export const Modal = styled.div`
   justify-content: space-around;
   color: white;
   box-sizing: border-box;
+
+  img {
+    opacity: 0;
+    animation: ${animacaoLogo} 1s ease-in forwards;
+  }
 `;
 
 export const Mensagem = styled.p`
@@ -38,8 +49,6 @@ export const Mensagem = styled.p`
   font-size: 20px;
   margin: 20px auto;
 `;
-
-
 
 export const Formulario = styled.form`
   width: 100%;

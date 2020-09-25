@@ -1,7 +1,7 @@
 import React from 'react';
 import api from '../../../services/api';
 import { checkAuth } from '../../../services/checkAuth';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import { Item, Lista, Container, Botao } from './style';
 
@@ -29,14 +29,15 @@ const Categorias = (props) => {
     checkAuth(localStorage.getItem('token'), history);
   });
 
-  console.log(categorias);
-
+  console.log(categorias)
   return (
     <Container>
       <h1>Categorias</h1>
-      <Botao color="black" background="white" size="250px" hover="#EEE">
-        Novo
-      </Botao>
+      <Link to="/acesso/categorias/novo">
+        <Botao color="black" background="white" size="250px" hover="#EEE">
+          Novo
+        </Botao>
+      </Link>
       {categorias ? (
         <Lista>
           {categorias.map((categoria) => {
