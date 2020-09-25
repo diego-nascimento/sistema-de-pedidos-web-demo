@@ -5,7 +5,7 @@ import Pedido from './pages/pedido';
 import Produtos from './pages/produtos';
 import Finalizado from './pages/finalizado';
 import CategoriasAcesso from './pages/UserSide/Categoria';
-import Login from './pages/UserSide/Login/index';
+import Login from './pages/UserSide/login/index';
 
 export default function Routes() {
   return (
