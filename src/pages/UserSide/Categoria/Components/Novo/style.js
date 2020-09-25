@@ -1,5 +1,12 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
+const animacaoImagem = keyframes`
+  from{
+    opacity: 0
+  }to{
+    opacity: 1
+  }
+`;
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -45,6 +52,7 @@ export const Container = styled.div`
     height: 100px;
     padding: 10px;
     resize: none;
+    font-size: 1.2rem;
   }
 `;
 
@@ -69,6 +77,7 @@ export const Preview = styled.div`
 
   img {
     border-radius: 25px;
+    animation: ${animacaoImagem} 0.5s ease-in-out forwards;
   }
 
   .BotaoRemover {
@@ -84,5 +93,28 @@ export const Preview = styled.div`
     text-align: center;
     font-size: 1.2rem;
     font-weight: bold;
+  }
+`;
+
+export const Botao = styled.button`
+  margin-top: 20px;
+  width: ${(props) => props.size};
+  height: 50px;
+  color: ${(props) => props.color};
+  background-color: ${(props) => props.background};
+  align-self: center;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 15px;
+  transition: 0.3s;
+  box-sizing: border-box;
+
+  @media (max-width: 300px) {
+    font-size: 0.5rem;
+  }
+
+  &:hover {
+    background-color: ${(props) => props.hover};
   }
 `;

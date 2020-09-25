@@ -1,7 +1,7 @@
 import React from 'react';
 import { checkAuth } from '../../../../../services/checkAuth';
 import { useHistory } from 'react-router-dom';
-import { Container, Formulario, Preview } from './style';
+import { Container, Formulario, Preview, Botao } from './style';
 import api from '../../../../../services/api';
 
 function NovaCategoria() {
@@ -63,9 +63,20 @@ function NovaCategoria() {
           ref={imagemRef}
         />
         <input type="text" placeholder="Nome" />
-        <textarea style={{ border: '1px solid black' }}></textarea>
+        <textarea
+          style={{ border: '1px solid black' }}
+          placeholder="Descrição"
+        ></textarea>
 
-        <button onClick={enviarImage}>Enviar</button>
+        <Botao
+          onClick={enviarImage}
+          color="#fff"
+          background="black"
+          size="250px"
+          hover="#333"
+        >
+          Enviar
+        </Botao>
       </Formulario>
     </Container>
   );
