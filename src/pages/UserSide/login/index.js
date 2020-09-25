@@ -41,7 +41,7 @@ function Login() {
 
 
     return (
-        empresa.foto ?
+        
         <Container>
             <Modal>
             <img src={empresa.foto.url} alt={empresa.nome} style={{width: "40%", alignSelf: 'center', marginTop: '50px'}}/>
@@ -58,7 +58,7 @@ function Login() {
                 </Formulario>
             </Modal>
         </Container> 
-        : null
+        
     
     )
 }
