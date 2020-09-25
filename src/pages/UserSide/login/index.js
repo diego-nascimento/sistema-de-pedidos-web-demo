@@ -21,7 +21,7 @@ function LoginPage() {
 
   React.useEffect(() => {
     feedEmpresa();
-  }, [empresa]);
+  }, []);
 
   React.useEffect(() => {
     localStorage.removeItem('token');
@@ -46,7 +46,8 @@ function LoginPage() {
   }
 
   return empresa.foto ? (
-    <> <Login>
+    <> 
+    <Login>
     <Modal>
       <img src={logo} style={{width: "50%"}} alt="logo"/>
       <Formulario onSubmit={handleLogin}>
