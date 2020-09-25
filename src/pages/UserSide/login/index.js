@@ -46,33 +46,34 @@ function LoginPage() {
   }
 
   return empresa.foto ? (
-    <Login>
-      <Modal>
-        <img src={logo} style={{width: "50%"}} alt="logo"/>
-        <Formulario onSubmit={handleLogin}>
-          {incorrect ? <Mensagem>Usuario ou senha Incorretos</Mensagem> : null}
-          <Campo>
-            <label htmlFor="email">Email</label>
-            <Entrada
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              id="email"
-            />
-          </Campo>
-          <Campo>
-            <label htmlFor="senha">Senha</label>
-            <Entrada
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              id="senha"
-            />
-          </Campo>
-          <Botao type="submit">Login</Botao>
-        </Formulario>
-      </Modal>
-    </Login >
+    <> <Login>
+    <Modal>
+      <img src={logo} style={{width: "50%"}} alt="logo"/>
+      <Formulario onSubmit={handleLogin}>
+        {incorrect ? <Mensagem>Usuario ou senha Incorretos</Mensagem> : null}
+        <Campo>
+          <label htmlFor="email">Email</label>
+          <Entrada
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            id="email"
+          />
+        </Campo>
+        <Campo>
+          <label htmlFor="senha">Senha</label>
+          <Entrada
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            id="senha"
+          />
+        </Campo>
+        <Botao type="submit">Login</Botao>
+      </Formulario>
+    </Modal>
+  </Login >
+  </>
   ) : null;
 }
 
