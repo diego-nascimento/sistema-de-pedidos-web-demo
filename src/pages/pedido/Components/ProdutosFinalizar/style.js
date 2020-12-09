@@ -21,7 +21,6 @@ export const Container = styled.div`
     `}
 
      ul {
-        border-top: 1px solid black;
         border-bottom: 1px solid black;
         padding-bottom: 10px;
         margin-bottom: 10px;
@@ -42,7 +41,7 @@ export const Container = styled.div`
 `;
 
 export const Produto = styled.li`
-    padding: 20px 0px;
+    padding: 20px 10px;
     width: 98%;
     border: 1px solid black;
     display: flex;

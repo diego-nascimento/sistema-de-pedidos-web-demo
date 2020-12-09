@@ -143,7 +143,7 @@ export const Produto = styled.li`
         background-color: white;
         color: black;
         border-radius: 10px;
-        font-size: .9rem;
+        font-size: .9   rem;
     }
 
     

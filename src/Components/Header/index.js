@@ -20,24 +20,22 @@ function Header({ titulo }) {
 
   return empresa.foto ? (
     <Cabecalho>
-      <> <div className="container header-contatos">
+       <div className="container">
         <div className="contatos">
-          <p>
-            {' '}
-            <FaPhone /> <span> {empresa.telefone}</span>{' '}
-          </p>
-          <p>
-            {' '}
+          <div>
+            <FaPhone /> <span> {empresa.telefone}</span>
+          </div>
+          <div>
             <FaWhatsapp /> <span> {empresa.whatsapp}</span>
-          </p>
+          </div>
         </div>
         <div className="redesociais">
           <a href={empresa.facebook} target="blank">
-            {' '}
+           
             <FaFacebookF size="22" color="white" />
           </a>
           <a href={empresa.instagram} target="blank">
-            {' '}
+            
             <FaInstagram size="22" />
           </a>
         </div>
@@ -51,7 +49,7 @@ function Header({ titulo }) {
       <section className="titulo">
         <h2>{titulo}</h2>
       </section>
-    </>
+   
      
     </Cabecalho>
   ) : <Spinner animation="border" role="status">

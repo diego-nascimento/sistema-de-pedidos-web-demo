@@ -17,40 +17,37 @@ export const Cabecalho = styled.header `
   justify-content: space-evenly;
   padding: 0px 15px;
 }
-.header-contatos {
-  height: 40px;
-}
-
-span{
-  font-size: 1rem;
-
-  @media(max-width: 400px){
-    font-size: .8rem;
-  }
-}
-
-
 
 .contatos{
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: left;
+  height: 100%;
 }
+
+span{
+  margin-left: 5px;
+}
+
 img {
   height: 30px;
   color: white;
 }
 
-.contatos p {
+.contatos div {
   margin-left: 25px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+
 }
 
 a {
   color: white;
 }
 
-.contatos p:first-child {
+.contatos div:first-child {
   margin-left: 0;
 }
 

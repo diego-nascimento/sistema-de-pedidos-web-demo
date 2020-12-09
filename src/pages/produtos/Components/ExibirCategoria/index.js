@@ -1,30 +1,24 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {Categoria} from './style.js'
 import ListarProdutos from '../ListarProdutos/index';
+import {Accordion} from 'react-bootstrap'
 
 function ListarCategorias({categoria}){
-    const [mostrar, setMostrar] = useState(0)
-
-    function ExibirProdutos(){
-        if(mostrar === 1){
-            setMostrar(0)
-        }else{
-            setMostrar(1)
-        }
-    }
   return(
-    <>
-        <Categoria  onClick ={ExibirProdutos}>
-            <div className="imagem">
-                <img src={categoria.foto_id.url} alt="Foto da Categoria" />
-            </div>
-            <div className="nome-descricao">
-                <h3>{categoria.nome}</h3>
-                <p>{categoria.descricao}</p>
-            </div>
-        </Categoria>
-        <ListarProdutos categoria={categoria} mostrar={mostrar}/>
-   </>
+     <Accordion>
+             <Accordion.Toggle  variant="link" as={Categoria} eventKey={`${categoria._id}`}>
+                    <div className="imagem">
+                        <img src={categoria.foto_id.url} alt="Foto da Categoria" />
+                    </div>
+                    <div className="nome-descricao">
+                        <h3>{categoria.nome}</h3>
+                        <p>{categoria.descricao}</p>
+                    </div>
+            </Accordion.Toggle>
+                <Accordion.Collapse eventKey={`${categoria._id}`}>
+                    <ListarProdutos categoria={categoria}/>
+            </Accordion.Collapse>
+   </Accordion>
   );
 }
 

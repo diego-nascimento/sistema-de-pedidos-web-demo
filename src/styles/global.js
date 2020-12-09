@@ -62,7 +62,7 @@ h3{
 }
 
 
-p {
+p, span {
   font-size: 1.2rem;
   font-family: 'Roboto Slab', serif;
 

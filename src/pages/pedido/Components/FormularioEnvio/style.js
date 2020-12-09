@@ -14,16 +14,17 @@ export const Formulario = styled.form`
     margin-bottom: 13px;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
+    position: relative;
   }
 
   h2::after {
     content: "";
     background: black;
-    width: 90%;
-    height: 1px;
     position: absolute;
-    top: 50px;
+    width: 150%;
+    height: 1px;
+    bottom: 0px;
     display:block;
   }
 

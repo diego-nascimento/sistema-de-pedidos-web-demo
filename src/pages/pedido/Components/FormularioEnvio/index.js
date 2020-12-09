@@ -48,6 +48,7 @@ function FormularioEnvio({disabled, produtos}){
   return (
     <Formulario onSubmit={ConcluirPedido}>
         <h2>Dados de Envio</h2>
+        
           <input type="text" placeholder="Digite o Nome Aqui" className="outside"  value={nome} required onChange={e=> setNome(e.target.value)}/>
           <input type="tel" placeholder="Telefone" className="outside"  value={telefone} required onChange={e=> setTelefone(e.target.value)}/>
           <input type="email" placeholder="Digite seu e-mail aqui" className="outside"  value={email} required onChange={e=> setEmail(e.target.value)}/>

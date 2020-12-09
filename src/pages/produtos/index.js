@@ -10,8 +10,6 @@ import * as CartActions from '../../store/modules/cart/actions'
 
 function Produtos({dispatch}){
   
-
-  
 /*eslint-disable */
   useEffect(()=> {
     

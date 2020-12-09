@@ -5,7 +5,7 @@ export const ListaProdutos = styled.ul.attrs((props) => ({
 }))`
   list-style: none;
   transition: 1s;
-  display: ${(props) => (props.mostrar === 1 ? 'flex' : 'none')};
+  display: flex;
   width: 100%;
   background-color: blue;
 
