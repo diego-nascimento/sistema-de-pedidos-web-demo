@@ -8,10 +8,11 @@ export default createGlobalStyle`
   outline: 0;
   border: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased !important;
 }
+
+  
 
 #root {
   min-height: 100%;
@@ -28,29 +29,46 @@ body {
   margin: 0 auto;
 }
 
+h1, h2, h3{
+  font-family: 'Courgette', cursive;
+}
+
 h1 {
   text-transform: uppercase;
   font-size: 3.0rem;
   letter-spacing: 0.1em;
   font-weight: bold;
+
+  @media(max-width: 500px){
+    font-size: 1.8rem;
+  }
 }
 
 h2 {
   text-transform: uppercase;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   letter-spacing: 0.1em;
   font-weight: bold;
+
+  @media(max-width: 500px){
+    font-size: 1.5rem;
+  }
 }
 
-h2 {
-  text-transform: uppercase;
-  font-size: 1.8rem;
-  letter-spacing: 0.1em;
-  font-weight: bold;
+h3{
+  @media(max-width: 500px){
+    font-size: 1.1rem;
+  }
 }
+
 
 p {
-  font-size: 0.8rem;
+  font-size: 1.2rem;
+  font-family: 'Roboto Slab', serif;
+
+  @media(max-width: 500px){
+    font-size: .7rem;
+  }
 }
 
 

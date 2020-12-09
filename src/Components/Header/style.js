@@ -6,7 +6,6 @@ export const Cabecalho = styled.header `
   margin: 0 auto;
   background: rgb(48, 48, 48);
   color: white;
-  font-size: 0.8rem;
   box-sizing: border-box;
 
 .container {
@@ -20,6 +19,14 @@ export const Cabecalho = styled.header `
 }
 .header-contatos {
   height: 40px;
+}
+
+span{
+  font-size: 1rem;
+
+  @media(max-width: 400px){
+    font-size: .8rem;
+  }
 }
 
 
@@ -71,6 +78,10 @@ a {
 .banner img {
   width: 140px;
   height: 100%;
+
+  @media(max-width: 400px){
+    width: 80px;
+  }
 }
 
 .banner .container {
@@ -82,7 +93,6 @@ a {
 
 .banner .container h1 {
   margin-top: 20px;
-  font-size: 2.4rem;
   text-align: center;
   -webkit-touch-callout: none; 
   -webkit-user-select: none; 
@@ -90,13 +100,38 @@ a {
   -moz-user-select: none; 
   -ms-user-select: none; 
    user-select: none; 
+   position: relative;
+  display: flex;
+  justify-content: center;
 }
+
+.banner .container h1::before{
+  content: '';
+  width: 35%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  margin-top: 20px; 
+  top: -30px;
+}
+
+.banner .container h1::after{
+  content: '';
+  width: 25%;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  margin-top: 20px; 
+  bottom: -10px;
+}
+
+
 
 .titulo {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: black;
+  background-color: rgba(0,0,0, .8);
   -webkit-touch-callout: none; 
         -webkit-user-select: none; 
         -khtml-user-select: none; 

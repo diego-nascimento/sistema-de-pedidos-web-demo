@@ -46,13 +46,15 @@ import * as CartActions from '../../../../store/modules/cart/actions'
                     {produtos.map(produto =>{
                         return (
                             <Produto key={produto._id} >
-                                <img src={produto.foto_id.url} alt="Foto da Categoria"/>
-                                <div className="nome-descricao">
-                                    <h3>{produto.nome}</h3>
-                                    <p>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(produto.preco)}</p>
-                                    
-                                    <p>Quantidade: {produto.quantidade}</p>
-                                    <h3>SubTotal: {Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(produto.subtotal)}</h3>
+                                <div> 
+                                    <img src={produto.foto_id.url} alt="Foto da Categoria"/>
+                                    <div className="nome-descricao">
+                                        <h3>{produto.nome}</h3>
+                                        <p style={{fontWeight: 'bold'}}>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(produto.preco)}</p>
+                                            
+                                        <p>Quantidade: {produto.quantidade}</p>
+                                        <h3>SubTotal: {Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(produto.subtotal)}</h3>
+                                    </div>
                                 </div>
                                 <button onClick={e => dispatch(CartActions.RemoverDoCarrinho(produto._id))} >Remover</button>
                             </Produto> 

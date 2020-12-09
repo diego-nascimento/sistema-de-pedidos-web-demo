@@ -12,6 +12,10 @@ export const Pagina = styled.div`
       font-weight: bold;
       text-transform: uppercase;
   }
+
+  h3{
+    font-family: 'Roboto Slab', serif;
+  }
 `;
 
 export const Container = styled.div`
@@ -25,6 +29,11 @@ export const Container = styled.div`
     width: 300px;
     height: 200px;
     color: green;
+
+    @media (max-width: 500px){
+      width: 100px;
+      height: 100px;
+    }
   }
 
   .numeroPedido{

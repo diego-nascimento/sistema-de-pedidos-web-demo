@@ -4,25 +4,29 @@ export const Categoria = styled.li `
 display: flex;
 flex-direction: row;
 align-items: center;
-background: red;
+background: rgba(255, 0, 0, .75);
 border-top: 1px solid black;
-height: 100px;
+padding:20px 0px;
 cursor: pointer;
 
 
 .imagem {
-  width: 110px;
+  width: 200px;
   height: 100%;
   display: flex;
   align-items: center;
   border-radius: 15px;
   margin-left: 10px;
   margin-right: 10px;
+  
+  @media(max-width: 500px){
+      width: 120px;
+  }
 }
 
 .imagem img {
     width: 100%;
-    border-radius: 15px;
+    border-radius: 5px;
     -webkit-touch-callout: none; 
     -webkit-user-select: none; 
     -khtml-user-select: none; 
@@ -40,11 +44,5 @@ cursor: pointer;
 &:last-child{
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-}
-
-img {
-    padding: 10px 15px;
-    
-    width: 110px;
 }
 `;

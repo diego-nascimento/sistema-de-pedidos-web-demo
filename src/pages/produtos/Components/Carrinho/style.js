@@ -12,6 +12,7 @@ const aparecer = keyframes`
 export const Modal = styled.div.attrs(props=>({
     mostrar: props.mostrar
 }))`
+
      ${media.lessThan("medium")`
         display: ${props => props.mostrar === 1 ? "flex" : "none"};
         position: fixed;
@@ -19,8 +20,8 @@ export const Modal = styled.div.attrs(props=>({
         height:100vh;
         width: 100vw;
         background: green;
+        
     `}
-    
 ` 
 
 export const Container = styled.div.attrs(props=>({
@@ -78,6 +79,7 @@ export const Container = styled.div.attrs(props=>({
     }
 
     h3 {
+        font-size: 1.3rem;
         padding: 5px 0px 0px 5px;
         text-align: center;
         -webkit-touch-callout: none; 
@@ -97,13 +99,12 @@ export const Container = styled.div.attrs(props=>({
 `;
 
 export const Produto = styled.li`
-    height: 90px;
     width: 98%;
     border: 1px solid black;
     display: flex;
     flex-direction: row;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
     padding: 5px 10px;
     margin: 10px 5px 0px 5px;
     box-sizing: border-box;
@@ -115,6 +116,11 @@ export const Produto = styled.li`
         width: 98%;
         height: 100%;
     `}
+
+    div{
+        display: flex;
+        align-items: center;
+    }
 
     & img {
         width: 100px;
@@ -129,18 +135,15 @@ export const Produto = styled.li`
     }
 
     & button {
-        position: absolute;
-        right: 10px;
-        top: 22px;
         cursor: pointer;
-        height: 50%;
+        align-self: center;
         width: 70px;
         font-family: 'Roboto', sans-serif;
         font-weight: bold;
         background-color: white;
-        border: 1px solid black;
         color: black;
         border-radius: 10px;
+        font-size: .9rem;
     }
 
     
@@ -197,7 +200,7 @@ export const BotaoCarrinho = styled.div`
 
   div .numeroProdutos {
     position: absolute;
-      bottom: -5px;  
+      bottom: 0px;  
       right: 3px;
       background: green;
       color: white;
@@ -212,6 +215,8 @@ export const BotaoCarrinho = styled.div`
    p {
     font-weight: bold;
     font-size: 16px;
+    position: relative;
+    top: 7px;
    }
 
 `;

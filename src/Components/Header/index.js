@@ -2,6 +2,8 @@ import React from 'react';
 import { Cabecalho } from './style';
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhone } from 'react-icons/fa';
 import api from '../../services/api';
+import {Spinner} from 'react-bootstrap'
+
 
 function Header({ titulo }) {
   const [empresa, setEmpresa] = React.useState([]);
@@ -18,7 +20,7 @@ function Header({ titulo }) {
 
   return empresa.foto ? (
     <Cabecalho>
-      <div className="container header-contatos">
+      <> <div className="container header-contatos">
         <div className="contatos">
           <p>
             {' '}
@@ -49,8 +51,12 @@ function Header({ titulo }) {
       <section className="titulo">
         <h2>{titulo}</h2>
       </section>
+    </>
+     
     </Cabecalho>
-  ) : null;
+  ) : <Spinner animation="border" role="status">
+  <span className="sr-only">Loading...</span>
+</Spinner>;
 }
 
 export default Header;

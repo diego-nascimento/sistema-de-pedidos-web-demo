@@ -36,7 +36,7 @@ export default function cart(state = [], action) {
       }
 
     case '@case/clean':
-      console.log('teste')
+      
       return [];
         
     default: 

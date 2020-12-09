@@ -10,7 +10,6 @@ export const Rodape = styled.footer `
     justify-content: center;
 
     h3 {
-        font-size: 16px;
         font-weight: 400;
         color: white;
         -webkit-touch-callout: none; 

@@ -23,7 +23,7 @@ function Finalizado(props) {
         <MdDone />
         <h2>Pedido Finalizado!</h2>
         <div className="numeroPedido">
-          <h2>Seu pedido foi registrado e será preparado em breve!</h2>
+          <h3>Seu pedido foi registrado e será preparado em breve!</h3>
         </div>
       </Container>
       <Footer />

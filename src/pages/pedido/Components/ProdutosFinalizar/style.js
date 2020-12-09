@@ -42,7 +42,7 @@ export const Container = styled.div`
 `;
 
 export const Produto = styled.li`
-    height: 100px;
+    padding: 20px 0px;
     width: 98%;
     border: 1px solid black;
     display: flex;

@@ -19,7 +19,7 @@ import {connect} from 'react-redux'
                                 </div>
                                 <div className="nome-descricao">
                                     <h3>{produto.nome}</h3>
-                                    <p>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(produto.preco)}</p>
+                                    <p style={{fontWeight: 'bold'}}>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(produto.preco)}</p>
                                     <p>Quantidade: {produto.quantidade}</p>
                                     
                                 </div>

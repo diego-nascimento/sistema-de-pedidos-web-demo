@@ -42,7 +42,7 @@ function ListarProdutos(props){
               <div className="nome-descricao">
                 <h3>{produto.nome}</h3>
                 <p>{produto.descricao}</p>
-                <p>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(produto.preco)}</p>
+                <p style={{fontWeight: 'bold'}}>{Intl.NumberFormat('pt-BR', {style: 'currency', currency: 'BRL'}).format(produto.preco)}</p>
               </div>
             </Produto>
           )

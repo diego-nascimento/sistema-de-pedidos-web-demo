@@ -23,7 +23,7 @@ export const Formulario = styled.form`
     width: 90%;
     height: 1px;
     position: absolute;
-    top: 36px;
+    top: 50px;
     display:block;
   }
 

@@ -4,7 +4,6 @@ import styled  from 'styled-components'
 export const Container = styled.div`
    display: grid;
    flex: 1;
-   
 `;
 
 export const Pagina = styled.div`

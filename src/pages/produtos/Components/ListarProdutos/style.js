@@ -29,12 +29,12 @@ export const ListaProdutos = styled.ul.attrs((props) => ({
 `;
 
 export const Produto = styled.li`
-  background: green;
+  background: rgba(0, 255, 0, .7);
   display: flex;
   border: 1px solid black;
   position: relative;
   cursor: pointer;
-  height: 120px;
+  padding: 20px 0px;
   overflow: hidden;
   width: 100%;
 
@@ -46,6 +46,10 @@ export const Produto = styled.li`
     border-radius: 15px;
     margin-left: 10px;
     margin-right: 10px;
+
+    @media(max-width: 500px){
+      width: 120px;
+    }
   }
 
   .imagem img {

@@ -3,6 +3,7 @@ import Routes from './routes'
 import GlobalStyle from './styles/global'
 import {Provider} from 'react-redux'
 import store from './store'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
