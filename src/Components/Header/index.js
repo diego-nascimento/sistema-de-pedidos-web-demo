@@ -52,9 +52,18 @@ function Header({ titulo }) {
    
      
     </Cabecalho>
-  ) : <Spinner animation="border" role="status">
-  <span className="sr-only">Loading...</span>
-</Spinner>;
+
+  ) : <div style={
+    {
+      width: '100%', 
+      height: '100vh', 
+      display: 'flex', 
+      alignItems: 'center', 
+      justifyContent: 'center', 
+      background: 'white'
+    }}>
+      <Spinner animation="border" role="status" />
+    </div>
 }
 
 export default Header;
