@@ -6,12 +6,13 @@ import ProdutoFinalizar from '../../Components/ProdutosFinalizar';
 import FormularioEnvio from '../../Components/FormularioEnvio';
 import { connect } from 'react-redux';
 import * as CartActions from '../../store/modules/cart/actions';
-function Pedido({ dispatch }) {
-  /*eslint-disable */
+
+const Pedido: React.FC = ({ dispatch }: any) =>{
+
   useEffect(() => {
     dispatch(CartActions.PegarCarrinhoLocalStorage());
-  }, []);
-  /*eslint-enabled */
+  }, [dispatch]);
+
   return (
     <Pagina>
       <Header titulo="Pedido" />

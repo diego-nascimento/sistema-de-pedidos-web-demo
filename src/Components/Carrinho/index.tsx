@@ -115,7 +115,10 @@ const Carrinho: React.FC<CarrinhoProps> = ({
   );
 }
 
-const mapStateToProps = (state: any)  => ({
+const mapStateToProps = (state: any)  => (
+  
+  {
+  
   produtos: state.cart.map((produto: IProduto) => ({
     ...produto,
     subtotal: produto.preco * produto.quantidade,

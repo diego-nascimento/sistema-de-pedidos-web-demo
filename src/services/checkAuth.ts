@@ -1,6 +1,12 @@
 import api from './api';
 
-export const checkAuth = async (token, history) => {
+
+interface checkAuthProps{
+  token: string
+  history: any
+}
+
+export const checkAuth = async (token: string, history: any) => {
   const Bearer = `Bearer ${token}`;
   try {
     await api.post(

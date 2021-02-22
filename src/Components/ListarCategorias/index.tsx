@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Lista } from './style.js';
+import { Lista } from './style';
 import ExibirCategoria from '../ExibirCategoria/index';
 import {ICategoria} from '../../Interfaces/ICategoria'
 import { getCategorias } from '../../Util/getCategorias';

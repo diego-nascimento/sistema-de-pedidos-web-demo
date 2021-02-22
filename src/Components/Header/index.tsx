@@ -1,23 +1,29 @@
 import React from 'react';
 import { Cabecalho } from './style';
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhone } from 'react-icons/fa';
-import api from '../../services/api';
 import { Spinner } from 'react-bootstrap';
+import { getEmpresa } from '../../Util/getEmpresa';
+import { IEmpresa } from '../../Interfaces/IEmpresa';
 
-function Header({ titulo }) {
-  const [empresa, setEmpresa] = React.useState([]);
+interface HeaderProps {
+  titulo?: string
+}
 
-  async function feedEmpresa() {
-    const response = await api.get('/empresa');
+const Header:React.FC<HeaderProps> = ({ titulo }) =>{
+  const [empresa, setEmpresa] = React.useState<IEmpresa | null>(null);
 
-    setEmpresa(response.data);
-  }
+  
 
   React.useEffect(() => {
-    feedEmpresa();
-  }, [empresa]);
+    const FetchEmpresa = async () =>{
+      const response: IEmpresa = await getEmpresa()
+      setEmpresa(response)
+    }
 
-  return empresa.foto ? (
+    FetchEmpresa()
+  }, []);
+
+  return empresa && empresa.foto ? (
     <Cabecalho>
       <div className="container">
         <div className="contatos">

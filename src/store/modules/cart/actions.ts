@@ -1,11 +1,13 @@
-export function AdicionarAoCarrinho(produto){
+import { IProduto } from "../../../Interfaces/IProduto"
+
+export function AdicionarAoCarrinho(produto: IProduto){
   return {
     type: '@cart/add',
     produto
   }
 }
 
-export function RemoverDoCarrinho(produto){
+export function RemoverDoCarrinho(produto: string){
   return {
     type: '@cart/remove', 
     produto: produto

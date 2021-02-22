@@ -1,5 +1,5 @@
 import React from 'react'
-import {Categoria} from './style.js'
+import {Categoria} from './style'
 import ListarProdutos from '../ListarProdutos/index';
 import {Accordion} from 'react-bootstrap'
 import { ICategoria } from '../../Interfaces/ICategoria.js';

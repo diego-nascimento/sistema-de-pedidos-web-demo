@@ -1,19 +1,25 @@
 import React from 'react';
 import { Container, Produto} from './style';
 import {connect} from 'react-redux'
+import { IProduto } from '../../Interfaces/IProduto';
+
+interface ProdutoFinalizarProps{
+    produtos: IProduto[]
+    total: number
+}
 
 
- function ProdutosFinalizar({produtos, total}) {
+ const ProdutosFinalizar: React.FC<ProdutoFinalizarProps> = ({produtos, total})  =>{
   return (
     <Container>
         <div>
             
             <ul>
-                {produtos.map(produto =>{
+                {produtos.map((produto: IProduto, index: number) =>{
                     return (
                         <Produto key={produto._id} >
                             <div className ="container-dados">
-                                <span>{produto.numero}</span>
+                                <span>{index + 1}</span>
                                 <div className="imagem">
                                     <img src={produto.foto_id.url} alt="Foto da Categoria"/>
                                 </div>
@@ -35,13 +41,13 @@ import {connect} from 'react-redux'
   );
 }
 
-const mapStateToProps = state => ({
-    produtos: state.cart.map(produto =>({
+const mapStateToProps = (state: any) => ({
+    produtos: state.cart.map((produto: IProduto) =>({
         ...produto,
         subtotal: produto.preco * produto.quantidade
     })),
 
-    total: state.cart.reduce((total, produto) => {
+    total: state.cart.reduce((total:  number, produto: IProduto) => {
         return total + produto.preco * produto.quantidade;
     }, 0),
 });
