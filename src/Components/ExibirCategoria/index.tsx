@@ -2,8 +2,13 @@ import React from 'react'
 import {Categoria} from './style.js'
 import ListarProdutos from '../ListarProdutos/index';
 import {Accordion} from 'react-bootstrap'
+import { ICategoria } from '../../Interfaces/ICategoria.js';
 
-function ListarCategorias({categoria}){
+interface ListarCategoriasProps{
+    categoria: ICategoria
+}
+
+const ListarCategorias: React.FC<ListarCategoriasProps> = ({categoria}) =>{
   return(
      <Accordion>
              <Accordion.Toggle  variant="link" as={Categoria} eventKey={`${categoria._id}`}>
@@ -16,7 +21,7 @@ function ListarCategorias({categoria}){
                     </div>
             </Accordion.Toggle>
                 <Accordion.Collapse eventKey={`${categoria._id}`}>
-                    <ListarProdutos categoria={categoria}/>
+                    <ListarProdutos categoriaProps={categoria}/>
             </Accordion.Collapse>
    </Accordion>
   );

@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
-import { Pagina, Container } from './style';
 import Header from '../../Components/Header';
 import Footer from '../../Components/Footer';
-import ProdutoFinalizar from '../../Components/ProdutosFinalizar';
-import FormularioEnvio from '../../Components/FormularioEnvio';
+import ListarCategorias from '../../Components/ListarCategorias';
+
+import Carrinho from '../../Components/Carrinho';
+import { Container, Pagina } from './style';
 import { connect } from 'react-redux';
 import * as CartActions from '../../store/modules/cart/actions';
-function Pedido({ dispatch }) {
+
+const Produtos: React.FC = ({ dispatch }: any) => {
   /*eslint-disable */
   useEffect(() => {
     dispatch(CartActions.PegarCarrinhoLocalStorage());
@@ -14,14 +16,14 @@ function Pedido({ dispatch }) {
   /*eslint-enabled */
   return (
     <Pagina>
-      <Header titulo="Pedido" />
+      <Header titulo="Cardapio" />
       <Container>
-        <ProdutoFinalizar />
-        <FormularioEnvio />
+        <ListarCategorias />
+        <Carrinho />
       </Container>
       <Footer />
     </Pagina>
   );
 }
 
-export default connect()(Pedido);
+export default connect()(Produtos);

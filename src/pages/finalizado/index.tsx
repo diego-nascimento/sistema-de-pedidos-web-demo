@@ -6,11 +6,14 @@ import { MdDone } from 'react-icons/md';
 import { connect } from 'react-redux';
 import * as CartActions from '../../store/modules/cart/actions';
 
-function Finalizado(props) {
+interface FinalizadoProps{
+  dispatch: any
+}
+
+const Finalizado: React.FC<FinalizadoProps> = (props) => {
   /*eslint-disable */
   useEffect(() => {
     localStorage.clear();
-    console.log('teste');
     const { dispatch } = props;
     dispatch(CartActions.LimparCarrinho());
   }, []);

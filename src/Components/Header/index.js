@@ -2,8 +2,7 @@ import React from 'react';
 import { Cabecalho } from './style';
 import { FaFacebookF, FaInstagram, FaWhatsapp, FaPhone } from 'react-icons/fa';
 import api from '../../services/api';
-import {Spinner} from 'react-bootstrap'
-
+import { Spinner } from 'react-bootstrap';
 
 function Header({ titulo }) {
   const [empresa, setEmpresa] = React.useState([]);
@@ -20,7 +19,7 @@ function Header({ titulo }) {
 
   return empresa.foto ? (
     <Cabecalho>
-       <div className="container">
+      <div className="container">
         <div className="contatos">
           <div>
             <FaPhone /> <span> {empresa.telefone}</span>
@@ -31,11 +30,9 @@ function Header({ titulo }) {
         </div>
         <div className="redesociais">
           <a href={empresa.facebook} target="blank">
-           
             <FaFacebookF size="22" color="white" />
           </a>
           <a href={empresa.instagram} target="blank">
-            
             <FaInstagram size="22" />
           </a>
         </div>
@@ -49,21 +46,21 @@ function Header({ titulo }) {
       <section className="titulo">
         <h2>{titulo}</h2>
       </section>
-   
-     
     </Cabecalho>
-
-  ) : <div style={
-    {
-      width: '100%', 
-      height: '100vh', 
-      display: 'flex', 
-      alignItems: 'center', 
-      justifyContent: 'center', 
-      background: 'white'
-    }}>
+  ) : (
+    <div
+      style={{
+        width: '100%',
+        height: '100vh',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: 'white',
+      }}
+    >
       <Spinner animation="border" role="status" />
     </div>
+  );
 }
 
 export default Header;

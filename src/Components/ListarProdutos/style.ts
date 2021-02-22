@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const ListaProdutos = styled.ul.attrs((props) => ({
-  mostrar: props.mostrar,
-}))`
+export const ListaProdutos = styled.ul`
   list-style: none;
   transition: 1s;
   display: flex;
@@ -29,7 +27,7 @@ export const ListaProdutos = styled.ul.attrs((props) => ({
 `;
 
 export const Produto = styled.li`
-  background: rgba(0, 255, 0, .7);
+  background: rgba(0, 255, 0, 0.7);
   display: flex;
   border: 1px solid black;
   position: relative;
@@ -47,7 +45,7 @@ export const Produto = styled.li`
     margin-left: 10px;
     margin-right: 10px;
 
-    @media(max-width: 500px){
+    @media (max-width: 500px) {
       width: 120px;
     }
   }

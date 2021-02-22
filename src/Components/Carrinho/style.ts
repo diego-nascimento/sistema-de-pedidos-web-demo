@@ -1,6 +1,10 @@
 import styled, {keyframes} from 'styled-components'
 import media from 'styled-media-query'
 
+interface ModalProps{
+    mostrar: boolean
+}
+
 const aparecer = keyframes`
   from: {
     opacity: 0;
@@ -9,25 +13,25 @@ const aparecer = keyframes`
   }
 `;
 
-export const Modal = styled.div.attrs(props=>({
-    mostrar: props.mostrar
-}))`
-
-     ${media.lessThan("medium")`
-        display: ${props => props.mostrar === 1 ? "flex" : "none"};
+export const Modal = styled.div<ModalProps>`
+     @media(max-width: 750px){
+        display:  ${(props: ModalProps) => props.mostrar === true ? "flex" : "none"};
         position: fixed;
         top: 0;
         height:100vh;
         width: 100vw;
         background: green;
-        
-    `}
-` 
+     }
+            
+    
+`; 
 
-export const Container = styled.div.attrs(props=>({
-    scroll: props.scroll,
-    mostrar: props.mostrar
-}))`
+interface ContainerProps{
+    scroll: boolean
+    mostrar: boolean
+}
+
+export const Container = styled.div<ContainerProps>`
     width: 98%;
     max-width: 600px;
     min-height: 350px; 
@@ -38,7 +42,7 @@ export const Container = styled.div.attrs(props=>({
     max-height: 80%;
     box-sizing: border-box;
     position: fixed;
-    display: ${props => props.mostrar === 1 ? "flex" : "none"};
+    display: ${(props: ContainerProps) => props.mostrar === true ? "flex" : "none"};
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
@@ -65,7 +69,7 @@ export const Container = styled.div.attrs(props=>({
         position: relative;
         max-height: 600px;
         overflow: hidden;
-        overflow-y: ${props => props.scroll === 1 ? "scroll" : "none"}; 
+        overflow-y: ${(props: ContainerProps) => props.scroll === true ? "scroll" : "none"}; 
     }
 
     h2 {
@@ -149,10 +153,11 @@ export const Produto = styled.li`
     
 `;
 
+interface BotaoFinalizarProps{
+    disabled: boolean
+}
 
-export const BotaoFinalizar = styled.button.attrs(props=>({
-    disabled: props.disabled
-}))`
+export const BotaoFinalizar = styled.button<BotaoFinalizarProps>`
         margin-top: 1px;
         margin-bottom: 10px;
         width: 90%;
@@ -162,10 +167,10 @@ export const BotaoFinalizar = styled.button.attrs(props=>({
         font-family: 'Roboto', sans-serif;
         border: 1px solid black;
         font-weight: bold;
-        background-color: ${props => props.disabled === 1 ? "#cccccc" : "green"}; 
-        color: ${props => props.disabled === 1 ? "black" : "white"}; 
+        background-color: ${(props:BotaoFinalizarProps) => props.disabled === true ? "#cccccc" : "green"}; 
+        color: ${(props: BotaoFinalizarProps) => props.disabled === true ? "black" : "white"}; 
         border-radius: 10px;
-        cursor: ${props => props.disabled === 1 ? "default" : "pointer"};
+        cursor: ${(props: BotaoFinalizarProps) => props.disabled === true ? "default" : "pointer"};
         transition: background-color 0.5s; 
 `;
 

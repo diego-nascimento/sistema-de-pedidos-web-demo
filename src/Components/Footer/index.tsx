@@ -1,7 +1,7 @@
 import React from 'react'
 import {Rodape} from './style'
 
-function Footer(){
+const Footer: React.FC = () =>{
   return(
     <Rodape>
       <h3>Desenvolvido por Diego Nascimento.</h3>
